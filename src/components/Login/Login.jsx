@@ -109,6 +109,14 @@ const Login = () => {
                   onFinish={onFinish}
                   autoComplete="off"
                 >
+                  <h1 style={{
+                      display: "flex",
+                      margin: "auto",
+                      width: "100%",
+                      maxWidth: "230px",
+                      marginBottom: "30px",
+                      fontFamily:"bold",
+                    }}>Tippen Login</h1>
                   <img
                     src={AppImages.metaiImage}
                     alt=""
@@ -167,7 +175,7 @@ const Login = () => {
                         {!isLoading && !canShowAlert && (
                           <>
                             <LoginOutlined className="text-sm" size={"small"} />{" "}
-                            Login
+                            Tippen Login
                           </>
                         )}
                       </Button>

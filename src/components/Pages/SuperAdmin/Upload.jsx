@@ -324,7 +324,7 @@ const ScanUpload = () => {
 
   return (
     <>
-      <Divider orientation="left"> Upload Scanned Files</Divider>
+      <Divider orientation="left"> Tippen Upload Scanned Files</Divider>
       <div className="upload-container">
         <div className="uploader-container">
           <Space direction="vertical" style={{ display: "flex" }}>

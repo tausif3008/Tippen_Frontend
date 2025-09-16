@@ -5,14 +5,18 @@ export const URLS = {
   // BASE_URL: "http://filemanagement.metaxpay.in:8001/api/",
   // BASE_URL_EXCEL: "http://filemanagement.metaxpay.in:8001",
 
-  BASE_URL: "http://103.86.182.150:8001/api/",
-  BASE_URL_EXCEL: "http://103.86.182.150:8001",
+  // BASE_URL: "http://103.86.182.150:8001/api/",
+  // BASE_URL_EXCEL: "http://103.86.182.150:8001",
+
+  BASE_URL: "http://192.168.2.50:8001/api/",
+  BASE_URL_EXCEL: "http://192.168.2.50:8001",
 
   USER_LOGOUT: "version_0/users/logout/",
   USER_LOGIN_URL: "version_0/users/admin-login/",
   USER_PROFILE_URL: "version_0/users/user_profile_details/",
   ADD_USER_URL: "version_0/api/create-subuser/",
-  UPLOAD_SCANNED_FILES_ULR: "version_0/document/scan-upload-bulk/",
+  // UPLOAD_SCANNED_FILES_ULR: "version_0/document/scan-upload-bulk/",
+   UPLOAD_SCANNED_FILES_ULR: "version_0/document/tippen-scan-upload-bulk/",
   GET_AlLLOCATE_TO_RECTIFY_URL: "version_0/document/scan-document-list/?",
   GET_ALLOCATE_TO_DIGITISE_URL: "version_0/document/rectify-document-list/?",
   GET_ALLOCATE_TO_SHAPE_URL:

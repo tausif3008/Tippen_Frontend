@@ -33,7 +33,7 @@ const superAdminDashboardDetails = [
   },
   {
     key: "upload",
-    labels: "Upload Files",
+    labels: "Tippen Upload Files",
     icon: UploadOutlined,
   },
   {
@@ -66,61 +66,61 @@ const superAdminDashboardDetails = [
     labels: "Reports",
     icon: ProfileOutlined,
   },
-  {
-    key: "todaysMapTypeReports",
-    labels: "Todays Reports",
-    icon: ProfileOutlined,
-  },
-  {
-    key: "reupload",
-    labels: "Re Upload Files",
-    icon: UploadOutlined,
-  },
-  {
-    key: "preScanDocumentList",
-    labels: "Pre-scan List",
-    icon: ScanOutlined,
-  },
-  {
-    key: "todaysPreScanDocumentList",
-    labels: "Todays Pre-scan List",
-    icon: ScanOutlined,
-  },
-  {
-    key: "preDraftList",
-    labels: "Pre Draft List",
-    icon: TableOutlined,
-  },
-  {
-    key: "todaysPreDraftDocumentList",
-    labels: "Todays Pre-draft List",
-    icon: ScanOutlined,
-  },
-  {
-    key: "bellUploading",
-    labels: "Bel Uploading",
-    icon: UploadOutlined,
-  },
-  {
-    key: "createTalukaAdminForm",
-    labels: "Create Taluka Admin Form",
-    icon: FormOutlined,
-  },
-  {
-    key: "createDistrictAdmin",
-    labels: "Create District Admin Form",
-    icon: FormOutlined,
-  },
-  {
-    key: "updateQCPolygonCount",
-    labels: "Update Polygon Count",
-    icon: FileOutlined,
-  },
-  {
-    key: "userToAgency",
-    labels: "Retrieve Files From Agency",
-    icon: SwapLeftOutlined,
-  },
+  // {
+  //   key: "todaysMapTypeReports",
+  //   labels: "Todays Reports",
+  //   icon: ProfileOutlined,
+  // },
+  // {
+  //   key: "reupload",
+  //   labels: "Re Upload Files",
+  //   icon: UploadOutlined,
+  // },
+  // {
+  //   key: "preScanDocumentList",
+  //   labels: "Pre-scan List",
+  //   icon: ScanOutlined,
+  // },
+  // {
+  //   key: "todaysPreScanDocumentList",
+  //   labels: "Todays Pre-scan List",
+  //   icon: ScanOutlined,
+  // },
+  // {
+  //   key: "preDraftList",
+  //   labels: "Pre Draft List",
+  //   icon: TableOutlined,
+  // },
+  // {
+  //   key: "todaysPreDraftDocumentList",
+  //   labels: "Todays Pre-draft List",
+  //   icon: ScanOutlined,
+  // },
+  // {
+  //   key: "bellUploading",
+  //   labels: "Bel Uploading",
+  //   icon: UploadOutlined,
+  // },
+  // {
+  //   key: "createTalukaAdminForm",
+  //   labels: "Create Taluka Admin Form",
+  //   icon: FormOutlined,
+  // },
+  // {
+  //   key: "createDistrictAdmin",
+  //   labels: "Create District Admin Form",
+  //   icon: FormOutlined,
+  // },
+  // {
+  //   key: "updateQCPolygonCount",
+  //   labels: "Update Polygon Count",
+  //   icon: FileOutlined,
+  // },
+  // {
+  //   key: "userToAgency",
+  //   labels: "Retrieve Files From Agency",
+  //   icon: SwapLeftOutlined,
+  // },
 ];
 
 const adminDashboardDetails = [
