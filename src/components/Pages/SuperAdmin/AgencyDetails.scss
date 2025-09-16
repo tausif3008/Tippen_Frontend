@@ -1,0 +1,26 @@
+.agency-details-container {
+  .agency-add-button-container {
+    display: flex;
+    justify-content: end;
+    button {
+      background: orange;
+    }
+  }
+
+  .form-elements {
+    .ant-select-selector {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+    display: flex;
+  }
+}
+
+.create-agency-user-form {
+  .ant-form > div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+}

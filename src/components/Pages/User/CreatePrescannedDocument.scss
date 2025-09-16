@@ -1,0 +1,30 @@
+.create-prescanned-document-container > form .form-main-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2%;
+  padding: 1%;
+}
+
+.create-prescanned-document-container {
+  .ant-input-number {
+    width: 100%;
+  }
+
+  .ant-form {
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+}
+
+.form-main-container {
+  &__submit-button {
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+    padding-right: 3%;
+    .ant-btn {
+      margin-right: 20px;
+      width: 140%;
+    }
+  }
+}

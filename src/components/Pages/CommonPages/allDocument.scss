@@ -1,0 +1,28 @@
+.circle-container {
+    display: flex;
+  }
+  
+  .circle {
+    width: 50px; /* Change the width and height to modify circle size */
+    height: 50px; /* Change the width and height to modify circle size */
+    border-radius: 50%; /* Makes the shape a circle */
+    margin-right: 10px; /* Adjust the spacing between circles */
+  }
+  
+  /* Different colors for each circle */
+  .red {
+    background-color: red;
+  }
+  
+  .blue {
+    background-color: blue;
+  }
+  
+  .green {
+    background-color: green;
+  }
+  
+  .yellow {
+    background-color: yellow;
+  }
+  

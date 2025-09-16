@@ -1,0 +1,36 @@
+.ant-table-container {
+  .ant-table-thead > tr > th,
+  .ant-table-cell-scrollbar {
+    background: #abcee6 !important;
+  }
+  
+  .ant-table-tbody > tr:nth-child(even) {
+    background-color:  #cbe6f5;
+  }
+
+  .ant-table-tbody > tr:nth-child(odd) {
+    background-color:  #e1cff1;
+  }
+
+  .ant-table-cell-fix-left-last,
+  .ant-table-cell-fix-right {
+    background-color: #d7c9e3;
+  }
+  
+  .ant-table-tbody > th,
+  .ant-table-tbody > td {
+    border-bottom: 1px solid #f0e316;
+  }
+}
+
+:where(.css-dev-only-do-not-override-3rjpej).ant-table-wrapper
+  .ant-table-tbody
+  > tr
+  > th,
+:where(.css-dev-only-do-not-override-3rjpej).ant-table-wrapper
+  .ant-table-tbody
+  > tr
+  > td {
+  transition: background 0.2s, border-color 0.2s;
+  border-bottom: 1px solid yellow;
+}

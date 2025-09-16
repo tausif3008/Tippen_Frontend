@@ -1,0 +1,100 @@
+.login-form-container {
+  margin: auto;
+  display: flex;
+  background: url("https://img.freepik.com/free-vector/geometric-network-connection-background_23-2148876717.jpg?w=1060&t=st=1693557854~exp=1693558454~hmac=0878bf93ba601d90ae9bcc1fe3382e21db4c7c359768a6c887d9a27ec4fb0475");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  overflow: hidden;
+
+  .form-container {
+    margin: auto;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    padding: 2%;
+    margin-top: 8%;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: rgba(117, 154, 240, 0.5);
+
+    .ant-form {
+      margin: auto;
+      width: 80%;
+      img {
+        width: 50%;
+        margin-bottom: 3%;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 25px;
+      }
+
+      .ant-form-item-explain-error {
+        text-align: start;
+      }
+
+      .form-button {
+        width: 100%;
+        background: #180536;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 1%;
+      }
+
+      p {
+        margin-top: -10px;
+        text-align: start;
+        padding-left: 2%;
+      }
+    }
+  }
+
+  .form-image-container {
+    height: 500px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    background: url("https://i.pinimg.com/564x/9e/4f/67/9e4f67e47537c1fc3d2fb58e9c5b4857.jpg");
+
+    img {
+      margin-top: 40px;
+      width: 50%;
+    }
+
+    h1 {
+      width: 80%;
+      text-align: center;
+    }
+  }
+
+  .ant-form-item-control-input-content,
+  .ant-input {
+    border: none;
+  }
+
+  .ant-input-affix-wrapper-focused,
+  .ant-input-affix-wrapper {
+    border: none;
+  }
+
+  .eems-ant-input {
+    border-radius: 0px;
+    border: none;
+    border-bottom: 1px solid blue;
+  }
+
+  .ant-input-affix-wrapper::before {
+    border: none;
+  }
+}

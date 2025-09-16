@@ -1,0 +1,33 @@
+.file-exchange-form-container {
+  margin-bottom: -3%;
+  .file-exchange-form {
+    padding: 0px;
+    margin: 0px;
+
+    &__assign-to {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: -0.5%;
+      margin-right: 1%;
+    }
+  }
+}
+
+.file-exchange-space {
+  margin-bottom: -5%;
+  padding: 0px;
+  &__table-container {
+    width: 100%;
+  }
+}
+
+.file-exchange-collapse-search-form-container {
+  margin-bottom: 12px;
+  .ant-form-item {
+    margin-left: 0.7%;
+    margin-bottom: 0.7%;
+  }
+}

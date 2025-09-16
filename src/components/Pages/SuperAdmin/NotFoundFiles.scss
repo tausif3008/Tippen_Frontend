@@ -1,0 +1,33 @@
+.barcode-reader-main-container {
+  padding-bottom: 15px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+
+  .barcode-reader-image {
+    height: 60vh;
+    overflow: scroll;
+    img {
+      width: 100%;
+    }
+  }
+
+  .not-found-updated-form {
+    margin-left: 15px;
+
+    .ant-divider {
+      margin-bottom: 5px;
+      border: black;
+    }
+
+    .form-container {
+      padding: 20px;
+      .form-submit-button {
+        display: flex;
+        justify-content: end;
+      }
+    }
+  }
+  .note-para {
+    margin-top: 15px;
+  } 
+}

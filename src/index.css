@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Slab", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ant-pagination-prev {
+  margin-right: 7px !important;
+}
+
+.upload-container .ant-tooltip {
+  display: none;
+}
+
+.ant-pagination-next {
+  margin-left: 7px !important;
+}
+
+.ant-modal-footer {
+  display: none !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+button {
+  cursor: pointer !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.ant-btn-icon-only {
+  border: 1px rgb(153, 138, 138) !important;
+}
+
+.download-button {
+  background: rgb(213, 208, 55) !important;
+  color: black !important;
+  border: none !important;
+  cursor: pointer !important;
+}
+
+.download-button:hover {
+  background: rgb(231, 227, 131) !important;
+}
+
+.already-downloaded-button {
+  background: magenta !important;
+  color: white !important;
+  border: none !important;
+
+  cursor: pointer !important;
+}
+
+.already-downloaded-button:hover {
+  background: rgb(243, 108, 243) !important;
+}
+
+.edit-button {
+  background: rgb(127, 216, 18) !important;
+  color: #290c0c !important;
+  border: none !important;
+  cursor: pointer !important;
+}
+
+.edit-button:hover {
+  background: #e7c45b !important;
+}
+
+.create-button {
+  background: #b8cc37 !important;
+  color: black !important;
+  border: none !important;
+  cursor: pointer !important;
+}
+
+.create-button:hover {
+  background: #95c458 !important;
+}
+
+.search-button {
+  background-color: #66d66a !important;
+  color: rgb(55, 67, 130);
+  border: none !important;
+}
+
+.search-button:hover {
+  background-color: rgb(117, 192, 122) !important;
+  color: white !important;
+  color: rgb(24, 31, 63);
+
+}
+
+.clear-button {
+  background-color: #d9a112 !important;
+  color: #ffffff !important;
+}
+
+.clear-button:hover {
+  background-color: #e0c379 !important;
+}
+
+.rejected-button {
+  background: rgb(237, 35, 35) !important;
+  color: white !important;
+}
+
+.rejected-button:hover {
+  background: rgb(238, 131, 131) !important;
+}
+
+.completed-button {
+  background: #6e8adf !important;
+  color: wheat !important;
+}
+
+.completed-button:hover {
+  background: #6e8adf !important;
+}
+
+.upload-button {
+  background: #db5be2 !important;
+  color: white;
+}
+
+.upload-button:hover {
+  background: #e486e9 !important;
+}
+
+.ant-picker {
+  width: 267px;
+}
+.ant-picker-content tr > td:first-child .ant-picker-cell-inner:first-child {
+  background: rgb(211, 137, 137);
+  color: white !important;
+}
+
+/* .ant-picker-content  .ant-picker-cell-in-view{
+    background: rgb(253, 82, 82);
+    color: white !important;
+  } */
+
+/* .ant-picker-dropdown{
+  width: 400px !important;
+}
+*/
+
+.ant-picker-cell-inner {
+  border: 1px solid rgb(220, 240, 168);
+}
+
+/* @media screen and (max-width:900px) {
+  .ant-picker-panels{
+      display:flex;
+  flex-direction: column;
+  }
+} */
+
+/* uploading css  */
+.upload_remove_button {
+  background: rgb(234, 79, 79);
+  padding: 2px 5px;
+  border-radius: 4px;
+  color: white;
+  margin: 2px;
+}
+
+.upload_remove_button_container {
+  display: flex;
+  border: 1px solid rgb(225, 121, 121);
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  border-radius: 4px;
+  padding: 0px 2px;
+}
+
+.ant-upload-list {
+  margin-top: -7px;
+}
+
+.ant-upload-list-item {
+  border: 1px solid rgb(24, 165, 95);
+  height: 31px !important;
+  border-radius: 4px;
+}
+
+.error-file-list-element {
+  margin-bottom: 5px;
+}
+
+.error_file_header {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  .error-files-title {
+    display: none !important;
+  }
+  .ant-upload-list {
+    width: 100% !important;
+    margin-bottom: 10px;
+  }
+
+  .error-uploaded-files {
+    display: inline;
+    margin-top: 20px !important;
+    width: 100% !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    color:  red;
+  }
+
+  .error_file_header {
+    margin-bottom: 5px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    color: red;
+  }
+}
+
+.ant-upload-list-item span[title],
+.ant-upload-list-item-error span[title] {
+  color: black !important;
+}
+
+.ant-pagination {
+  display: flex !important;
+  margin-top: 1%;
+  margin-left: auto;
+}
+

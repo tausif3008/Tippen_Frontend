@@ -1,0 +1,74 @@
+.ant-tooltip {
+  display: none;
+}
+
+span[title] {
+  color: black;
+}
+
+.ant-upload-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.uploader-container {
+  width: 100%;
+  margin: auto;
+
+  .upload-list-header-upload-error {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .error-uploaded-files {
+    margin-left: 10px;
+    max-height: 200px;
+    overflow: auto;
+    .error-file-list-element {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    div {
+      margin-bottom: 3px;
+      overflow-y: hidden;
+    }
+
+    
+  }
+
+  .ant-upload-list {
+    padding: 0%;
+  }
+
+  .ant-upload-list-text {
+    color: black;
+    max-height: 200px;
+    overflow: auto;
+  }
+
+  :where(.css-dev-only-do-not-override-fpg3f5).ant-upload-wrapper
+    .ant-upload-list
+    .ant-upload-list-item-error
+    .ant-upload-list-item-name,
+  :where(.css-dev-only-do-not-override-fpg3f5).ant-upload-wrapper
+    .ant-upload-list
+    .ant-upload-list-item-error
+    .ant-upload-icon
+    .anticon {
+    color: #1b1818;
+  }
+
+  .ant-btn {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.error-file-list-element, .upload_remove_button_container{
+  width: 100% !important;
+}

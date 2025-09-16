@@ -1,0 +1,22 @@
+.form-select-open-button {
+  display: flex;
+  .ant-form {
+    display: flex;
+    width: 100%;
+    margin-bottom: -5px;
+  }
+}
+.create-village-form {
+  .ant-form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    .ant-select {
+      display: flex;
+      width: 100%;
+      .ant-select {
+        width: 100%;
+      }
+    }
+  }
+}

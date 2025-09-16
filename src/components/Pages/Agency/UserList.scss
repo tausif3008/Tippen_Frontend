@@ -1,0 +1,21 @@
+.user-list-container-agency {
+  .user-add-button-container {
+    display: flex;
+    justify-content: end;
+      }
+}
+
+.ant-form-component {
+  padding: 2% 5% 0px 5%;
+  .form-submit-btn {
+    display: flex;
+    justify-content: end;
+  }
+}
+.ant-modal-footer {
+  display: none;
+}
+
+.ant-switch-inner{
+  background: rgb(43, 171, 235)  !important;
+}

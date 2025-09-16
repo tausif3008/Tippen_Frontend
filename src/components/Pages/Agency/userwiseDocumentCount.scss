@@ -1,0 +1,8 @@
+:where(.css-dev-only-do-not-override-fpg3f5).ant-table-wrapper
+  .ant-table-cell-fix-left,
+:where(.css-dev-only-do-not-override-fpg3f5).ant-table-wrapper
+  .ant-table-cell-fix-right {
+  position: sticky !important;
+  z-index: 2;
+  background: rgb(118, 197, 197);
+}

@@ -1,0 +1,15 @@
+.form-elements-taluka {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2%;
+}
+
+.submit-button {
+  margin-top: 10px;
+  display: flex;
+  justify-content: end;
+
+  .ant-btn {
+    width: 100px;
+  }
+}
