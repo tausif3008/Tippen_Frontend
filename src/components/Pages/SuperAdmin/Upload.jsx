@@ -333,7 +333,7 @@ const ScanUpload = () => {
               percent
               progress
               onChange={uploadingProgress}
-              accept={["image/png", "image/jpeg"]}
+              accept={["image/png", "image/jpeg", "image/JPG"]}
               fileList={fileList}
               listType="text"
             >

@@ -8,8 +8,8 @@ export const URLS = {
   // BASE_URL: "http://103.86.182.150:8001/api/",
   // BASE_URL_EXCEL: "http://103.86.182.150:8001",
 
-  BASE_URL: "http://192.168.2.50:8001/api/",
-  BASE_URL_EXCEL: "http://192.168.2.50:8001",
+  BASE_URL: "http://192.168.2.85:8001/api/",
+  BASE_URL_EXCEL: "http://192.168.2.85:8001",
 
   USER_LOGOUT: "version_0/users/logout/",
   USER_LOGIN_URL: "version_0/users/admin-login/",
@@ -63,7 +63,7 @@ export const URLS = {
   UPLOAD_GOV_PDF_FILE_URL: "version_0/document/govt-pdf-upload-bulk/",
   UPDATE_POLYGON_COUNT_URL: "version_0/document/document-update-remark/",
   ADD_AGENCY_USER_URL: "version_0/authentication/register_agency_user/",
-  GET_ALL_DOCUMENT_LIST_SUPER_ADMIN: "version_0/document/all-document-list/?",
+  GET_ALL_DOCUMENT_LIST_SUPER_ADMIN: "version_0/document/tippen-all-document-list/?",
   GET_DASHBOARD_COUNT_URL: "version_0/dashboard/dashboard-count/",
   CREATE_AGENCY: "version_0/agency/create-agency/",
   GET_DEPARTMENT_LIST_URL: "version_0/agency/department-list/",

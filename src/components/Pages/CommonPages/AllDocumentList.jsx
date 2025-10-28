@@ -112,85 +112,85 @@ const AllDocumentList = () => {
         },
       },
       {
-        title: "Scan By",
-        dataIndex: "scan_by_username",
+        title: "Scan Uploaded By",
+        dataIndex: "tippen_uploaded_by_username",
         width: 150,
       },
       {
         title: "Scan Uploaded Date",
-        dataIndex: "scan_uploaded_date",
+        dataIndex: "tippen_uploaded_date",
         width: 180,
 
         render: (text) => moment(text).format("DD-MM-YYYY hh:mm:ss"), // Formatting the date
       },
-      {
-        title: "Rectify Agency",
-        dataIndex: "rectify_agency_name",
-        width: 170,
-      },
-      {
-        title: "Rectify User",
-        dataIndex: "rectify_by_username",
-        width: 170,
-      },
-      {
-        title: "Rectify Date",
-        dataIndex: "rectify_completed_date",
-        width: 170,
-        render: (text) => moment(text).format("DD-MM-YYYY hh:mm:ss"), // Formatting the date
-      },
-      {
-        title: "Rectify Remarks",
-        dataIndex: "remarks",
-        width: 170,
-      },
+      // {
+      //   title: "Rectify Agency",
+      //   dataIndex: "rectify_agency_name",
+      //   width: 170,
+      // },
+      // {
+      //   title: "Rectify User",
+      //   dataIndex: "rectify_by_username",
+      //   width: 170,
+      // },
+      // {
+      //   title: "Rectify Date",
+      //   dataIndex: "rectify_completed_date",
+      //   width: 170,
+      //   render: (text) => moment(text).format("DD-MM-YYYY hh:mm:ss"), // Formatting the date
+      // },
+      // {
+      //   title: "Rectify Remarks",
+      //   dataIndex: "remarks",
+      //   width: 170,
+      // },
       {
         title: "Digitize Agency",
-        dataIndex: "digitize_agency_name",
+        dataIndex: "tippen_digitize_agency_id_agency_name",
       },
       {
         title: "Digitize User",
-        dataIndex: "digitize_by_username",
+        dataIndex: "tippen_digitize_by_username",
         width: 170,
       },
       {
         title: "Digitize Date",
-        dataIndex: "digitize_completed_date",
+        dataIndex: "tippen_digitize_completed_date",
         width: 170,
 
         render: (text) => moment(text).format("DD-MM-YYYY hh:mm:ss"), // Formatting the date
       },
       {
         title: "Digitize Remarks",
-        dataIndex: "digitize_remarks",
+        dataIndex: "tippen_digitize_remarks",
         width: 170,
       },
       {
         title: "QC Agency",
-        dataIndex: "qc_agency_name",
+        dataIndex: "tippen_qc_agency_id_agency_name",
       },
       {
         title: "QC Assign Date",
-        dataIndex: "qc_assign_date",
+        dataIndex: "tippen_qc_assign_date",
         render: (text) => moment(text).format("DD-MM-YYYY hh:mm:ss"), // Formatting the date
       },
       {
         title: "QC User",
-        dataIndex: "qc_by_username",
+        dataIndex: "tippen_qc_by_username",
       },
       {
         title: "QC Date",
-        dataIndex: "qc_completed_date",
+        dataIndex: "tippen_qc_completed_date",
         render: (text) => moment(text).format("DD-MM-YYYY hh:mm:ss"), // Formatting the date
       },
       {
         title: "QC Remarks",
-        dataIndex: "qc_remarks",
+        dataIndex: "tippen_qc_remarks",
         width: 170,
       },
       {
         title: "Govt QC Assign Date",
-        dataIndex: "gov_qc_assign_date",
+        dataIndex: "tippen_gov_qc_assign_date",
         render: (text) => moment(text).format("DD-MM-YYYY hh:mm:ss"), // Formatting the date
       },
       {
@@ -199,47 +199,47 @@ const AllDocumentList = () => {
       },
       {
         title: "Govt QC Date",
-        dataIndex: "gov_qc_completed_date",
+        dataIndex: "tippen_gov_qc_completed_date",
         render: (text) => moment(text).format("DD-MM-YYYY hh:mm:ss"), // Formatting the date
       },
-      {
-        title: "Topology Agency Name",
-        dataIndex: "topology_agency_name",
-      },
-      {
-        title: "Shape Agency Name",
-        dataIndex: "shape_agency_name",
-      },
+      // {
+      //   title: "Topology Agency Name",
+      //   dataIndex: "topology_agency_name",
+      // },
+      // {
+      //   title: "Shape Agency Name",
+      //   dataIndex: "shape_agency_name",
+      // },
      
-      {
-        title: "Shape By Username",
-        dataIndex: "shape_by_username",
-      },
+      // {
+      //   title: "Shape By Username",
+      //   dataIndex: "shape_by_username",
+      // },
 
-      {
-        title: "Topology By Username",
-        dataIndex: "topology_by_username",
-      },
+      // {
+      //   title: "Topology By Username",
+      //   dataIndex: "topology_by_username",
+      // },
 
-      {
-        title: "Topology Assign Date",
-        dataIndex: "topology_assign_date",
-      },
-      {
-        title: "Topology Completed Date",
-        dataIndex: "topology_completed_date",
-        render: (text) => moment(text).format("DD-MM-YYYY hh:mm:ss"), // Formatting the date
-      },
+      // {
+      //   title: "Topology Assign Date",
+      //   dataIndex: "topology_assign_date",
+      // },
+      // {
+      //   title: "Topology Completed Date",
+      //   dataIndex: "topology_completed_date",
+      //   render: (text) => moment(text).format("DD-MM-YYYY hh:mm:ss"), // Formatting the date
+      // },
 
-      {
-        title: "Shape Assign Date",
-        dataIndex: "shape_assign_date",
-      },
-      {
-        title: "Shape Completed Date",
-        dataIndex: "shape_completed_date",
-        render: (text) => moment(text).format("DD-MM-YYYY hh:mm:ss"), // Formatting the date
-      },
+      // {
+      //   title: "Shape Assign Date",
+      //   dataIndex: "shape_assign_date",
+      // },
+      // {
+      //   title: "Shape Completed Date",
+      //   dataIndex: "shape_completed_date",
+      //   render: (text) => moment(text).format("DD-MM-YYYY hh:mm:ss"), // Formatting the date
+      // },
       {
         title: "Check BEL Uploaded Status",
         dataIndex: "bel_scan_uploaded",
@@ -309,34 +309,34 @@ const AllDocumentList = () => {
         
       },
       {
-        title: "Scan By",
-        dataIndex: "scan_by_username",
+        title: "Scan Uploaded By",
+        dataIndex: "tippen_uploaded_by_username",
         width: 150,
       },
       {
         title: "Scan Uploaded Date",
-        dataIndex: "scan_uploaded_date",
+        dataIndex: "tippen_uploaded_date",
         width: 180,
 
         render: (text) => moment(text).format("DD-MM-YYYY hh:mm:ss"), // Formatting the date
       },
-      {
-        title: "Rectify Agency",
-        dataIndex: "rectify_agency_name",
-        width: 170,
-      },
-      {
-        title: "Rectify User",
-        dataIndex: "rectify_by_username",
-        width: 170,
-      },
-      {
-        title: "Rectify Date",
-        dataIndex: "rectify_completed_date",
-        width: 170,
+      // {
+      //   title: "Rectify Agency",
+      //   dataIndex: "rectify_agency_name",
+      //   width: 170,
+      // },
+      // {
+      //   title: "Rectify User",
+      //   dataIndex: "rectify_by_username",
+      //   width: 170,
+      // },
+      // {
+      //   title: "Rectify Date",
+      //   dataIndex: "rectify_completed_date",
+      //   width: 170,
 
-        render: (text) => moment(text).format("DD-MM-YYYY hh:mm:ss"), // Formatting the date
-      },
+      //   render: (text) => moment(text).format("DD-MM-YYYY hh:mm:ss"), // Formatting the date
+      // },
       {
         title: "Digitize Agency",
         dataIndex: "digitize_agency_name",
@@ -355,35 +355,35 @@ const AllDocumentList = () => {
         render: (text) => moment(text).format("DD-MM-YYYY hh:mm:ss"), // Formatting the date
       },
 
-      {
-        title: "Shape By Username",
-        dataIndex: "shape_by_username",
-      },
+      // {
+      //   title: "Shape By Username",
+      //   dataIndex: "shape_by_username",
+      // },
 
-      {
-        title: "Topology By Username",
-        dataIndex: "topology_by_username",
-      },
+      // {
+      //   title: "Topology By Username",
+      //   dataIndex: "topology_by_username",
+      // },
 
-      {
-        title: "Topology Assign Date",
-        dataIndex: "topology_assign_date",
-      },
-      {
-        title: "Topology Completed Date",
-        dataIndex: "topology_completed_date",
-        render: (text) => moment(text).format("DD-MM-YYYY hh:mm:ss"), // Formatting the date
-      },
+      // {
+      //   title: "Topology Assign Date",
+      //   dataIndex: "topology_assign_date",
+      // },
+      // {
+      //   title: "Topology Completed Date",
+      //   dataIndex: "topology_completed_date",
+      //   render: (text) => moment(text).format("DD-MM-YYYY hh:mm:ss"), // Formatting the date
+      // },
 
-      {
-        title: "Shape Assign Date",
-        dataIndex: "shape_assign_date",
-      },
-      {
-        title: "Shape Completed Date",
-        dataIndex: "shape_completed_date",
-        render: (text) => moment(text).format("DD-MM-YYYY hh:mm:ss"), // Formatting the date
-      },
+      // {
+      //   title: "Shape Assign Date",
+      //   dataIndex: "shape_assign_date",
+      // },
+      // {
+      //   title: "Shape Completed Date",
+      //   dataIndex: "shape_completed_date",
+      //   render: (text) => moment(text).format("DD-MM-YYYY hh:mm:ss"), // Formatting the date
+      // },
     
 
     ];
@@ -654,7 +654,7 @@ const AllDocumentList = () => {
 
   return (
     <div className="b-2">
-      <Divider orientation="left">All Document List</Divider>
+      <Divider orientation="left">All Tippen Document List</Divider>
       <Collapse
         items={[
           {

@@ -10,11 +10,11 @@ import ShapeFileAllocation from "./ShapeFileAllocation";
 const onChange = (key) => {};
 
 const items = [
-  {
-    key: "rectify",
-    label: "Rectify",
-    children: <FileAllocation></FileAllocation>,
-  },
+  // {
+  //   key: "rectify",
+  //   label: "Rectify",
+  //   children: <FileAllocation></FileAllocation>,
+  // },
   {
     key: "digitize",
     label: "Digitize",
@@ -30,16 +30,16 @@ const items = [
     label: "Govt QC",
     children: <GovtQcFilesAssignDistAdmin></GovtQcFilesAssignDistAdmin>,
   },
-  {
-    key: "topology",
-    label: "Topology",
-    children: <TopologyFilesAssignDistAdmin></TopologyFilesAssignDistAdmin>,
-  },
-  {
-    key: "shape",
-    label: "Shape",
-    children: <ShapeFileAllocation></ShapeFileAllocation>,
-  },
+  // {
+  //   key: "topology",
+  //   label: "Topology",
+  //   children: <TopologyFilesAssignDistAdmin></TopologyFilesAssignDistAdmin>,
+  // },
+  // {
+  //   key: "shape",
+  //   label: "Shape",
+  //   children: <ShapeFileAllocation></ShapeFileAllocation>,
+  // },
 ];
 
 const FileUploadSection = () => {
