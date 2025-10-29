@@ -627,7 +627,7 @@ const DigitizeSection = () => {
           {...props}
           onChange={uploadingProgress}
           fileList={fileList}
-          accept={".dwg"}
+          accept={".pdf"}
           listType="text"
           disabled={setedStatus !== "approved"}
         >
@@ -638,7 +638,7 @@ const DigitizeSection = () => {
             Click or drag folder to this area to upload
           </p>
           <p className="ant-upload-hint">
-            Support for a single or bulk upload. Only JPEG and JPG images are
+            Support for a single or bulk upload. Only PDF and Zip file are
             allowed.
           </p>
         </Dragger>

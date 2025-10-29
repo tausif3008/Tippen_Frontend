@@ -45,15 +45,15 @@ const AgencyUploadSection = () => {
   }, [selector]);
 
   const items = [
-    {
-      key: "rectify",
-      label: "Rectify",
-      children: departmentList && (
-        <UserFileAllocation
-          departmentId={departmentList[AppConstants.RECTIFY_DEPARTMENT]}
-        ></UserFileAllocation>
-      ),
-    },
+    // {
+    //   key: "rectify",
+    //   label: "Rectify",
+    //   children: departmentList && (
+    //     <UserFileAllocation
+    //       departmentId={departmentList[AppConstants.RECTIFY_DEPARTMENT]}
+    //     ></UserFileAllocation>
+    //   ),
+    // },
     {
       key: "digitize",
       label: "Digitize",
@@ -72,24 +72,24 @@ const AgencyUploadSection = () => {
         ></QcFilesAssignUser>
       ),
     },
-    {
-      key: "topology",
-      label: "Topology",
-      children: departmentList && (
-        <TopologyUserAllocation
-          departmentId={departmentList[AppConstants.TOPOLOGY_DEPARTMENT]}
-        ></TopologyUserAllocation>
-      ),
-    },
-    {
-      key: "shape",
-      label: "Shape",
-      children: departmentList && (
-        <ShapeUserAllocation
-          departmentId={departmentList[AppConstants.SHAPE_DEPARTMENT]}
-        ></ShapeUserAllocation>
-      ),
-    },
+    // {
+    //   key: "topology",
+    //   label: "Topology",
+    //   children: departmentList && (
+    //     <TopologyUserAllocation
+    //       departmentId={departmentList[AppConstants.TOPOLOGY_DEPARTMENT]}
+    //     ></TopologyUserAllocation>
+    //   ),
+    // },
+    // {
+    //   key: "shape",
+    //   label: "Shape",
+    //   children: departmentList && (
+    //     <ShapeUserAllocation
+    //       departmentId={departmentList[AppConstants.SHAPE_DEPARTMENT]}
+    //     ></ShapeUserAllocation>
+    //   ),
+    // },
   ];
 
   return (

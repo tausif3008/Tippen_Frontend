@@ -18,14 +18,14 @@ export const URLS = {
   // UPLOAD_SCANNED_FILES_ULR: "version_0/document/scan-upload-bulk/",
    UPLOAD_SCANNED_FILES_ULR: "version_0/document/tippen-scan-upload-bulk/",
   GET_AlLLOCATE_TO_RECTIFY_URL: "version_0/document/scan-document-list/?",
-  GET_ALLOCATE_TO_DIGITISE_URL: "version_0/document/rectify-document-list/?",
+  GET_ALLOCATE_TO_DIGITISE_URL: "version_0/document/tippen-scan-document-list/?",
   GET_ALLOCATE_TO_SHAPE_URL:
     "version_0/document/topology-complete-document-list/?",
 
   GET_ALLOCATE_TO_SHAPE_FILE_URL:
     "version_0/document/govt-qc-pdf-complete-document-list/?",
   UPLOAD_RECTIFY_FILES_URL: "version_0/document/rectify-bulk/",
-  UPLOAD_DIGITIZED_FILES_URL: "version_0/document/digitize-upload-bulk/",
+  UPLOAD_DIGITIZED_FILES_URL: "version_0/document/tippen-digitize-bulk/",
   UPLOAD_SHAPE_FILES_URL: "version_0/document/shape-upload-bulk/",
 
   UPLOAD_TOPOLOGY_FILES_URL: "version_0/document/topo-dwg-upload-bulk/",
@@ -37,22 +37,22 @@ export const URLS = {
     "version_0/document/scan-assignto-agencyuser-bulk/",
   UPLOAD_REACTIFY_BULK_USER: "version_0/document/rectify-bulk/",
   ALLOCATE_TO_AGENCY_DIGITIZE:
-    "version_0/document/rectify-assignto-agency-bulk/",
+    "version_0/document/tippen-digitize-assignto-agency-bulk/",
   ALLOCATE_TO_AGENCY_TOPOLOGY:
     "version_0/document/topology-assignto-agency-bulk/",
   ALLOCATE_TO_AGENCY_TO_USER:
-    "version_0/document/rectify-assignto-agencyuser-bulk/",
+    "version_0/document/tippen-digitize-assignto-agencyuser-bulk/",
   ALLOCATE_TO_SHAPE_AGENCY_TO_USER:
     "version_0/document/shape-assignto-agencyuser-bulk/",
   ALLOCATE_TOPOLOGY_AGENCY_TO_USER:
     "version_0/document/topology-assignto-agencyuser-bulk/",
   ALLOCATE_TO_AGENCY_SHAPE: "version_0/document/shape-assignto-agency-bulk/",
-  GET_QC_DETAILS_URL: "version_0/document/digitize-document-list/?",
+  GET_QC_DETAILS_URL: "version_0/document/tippen-digitize-document-list/?",
   GET_PDF_PENDING_URL: "version_0/document/qc-document-list/?",
   GET_GOVT_QC_PENDING_URL: "version_0/document/govt-pending-document-list/?",
   GET_GOVT_PDF_PENDING_URL:
     "version_0/document/govt-pdf-pending-document-list/?",
-  ASSIGN_QC_FILES_TO_USER: "version_0/document/digitize-assignto-agency-bulk/",
+  ASSIGN_QC_FILES_TO_USER: "version_0/document/tippen-qc-assignto-agency-bulk/",
   ALLOCATE_QC_FILES_ADMIN_TO_USER:
     "version_0/document/digitize-assignto-agencyuser-bulk/",
   ALLOCATE_GOVT_QC_FILES_TO_DIST_ADMIN:

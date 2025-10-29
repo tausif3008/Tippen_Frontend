@@ -27,35 +27,19 @@ const UserFiles = () => {
 
   const items = [];
 
-  if (departments.includes("Rectify")) {
-    items.push({
-      key: "rectify",
-      label: "Rectify",
-      children: <UserFileSection></UserFileSection>,
-    });
-  }
+  // if (departments.includes("Rectify")) {
+  //   items.push({
+  //     key: "rectify",
+  //     label: "Rectify",
+  //     children: <UserFileSection></UserFileSection>,
+  //   });
+  // }
 
   if (departments.includes("Digitize")) {
     items.push({
       key: "digitize",
-      label: "Digitize",
+      label: "Tippen Digitize",
       children: <DigitizeSection></DigitizeSection>,
-    });
-  }
-
-  if (departments.includes("Topology")) {
-    items.push({
-      key: "topology",
-      label: "Topology",
-      children: <TopologySection></TopologySection>,
-    });
-  }
-
-  if (departments.includes("Shape")) {
-    items.push({
-      key: "shape",
-      label: "Shape",
-      children: <ShapeSection></ShapeSection>,
     });
   }
 
@@ -66,13 +50,29 @@ const UserFiles = () => {
       children: <QCFileUser></QCFileUser>,
     });
 
-    items.push({
-      key: "pdf",
-      label: "PDF",
-      children: <PDFSection></PDFSection>,
-    });
+    // items.push({
+    //   key: "pdf",
+    //   label: "PDF",
+    //   children: <PDFSection></PDFSection>,
+    // });
   }
 
+  // if (departments.includes("Topology")) {
+  //   items.push({
+  //     key: "topology",
+  //     label: "Topology",
+  //     children: <TopologySection></TopologySection>,
+  //   });
+  // }
+
+  // if (departments.includes("Shape")) {
+  //   items.push({
+  //     key: "shape",
+  //     label: "Shape",
+  //     children: <ShapeSection></ShapeSection>,
+  //   });
+  // }
+  
   if (departments.includes("Scan")) {
     items.push({
       key: "gov_qc",
