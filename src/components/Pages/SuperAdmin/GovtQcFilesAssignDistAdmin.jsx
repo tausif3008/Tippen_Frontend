@@ -168,7 +168,7 @@ const GovtQcFilesAssignDistAdmin = ({ departmentId }) => {
         })
       );
     } else {
-      message.info("Please select user to assign files.");
+      message.info("Please select user to assign files...");
     }
   }
 

@@ -76,15 +76,15 @@ const UserFiles = () => {
   if (departments.includes("Scan")) {
     items.push({
       key: "gov_qc",
-      label: "Gov QC Pending Approval",
+      label: "Tippen Gov QC Pending Approval",
       children: <GovQCSection></GovQCSection>,
     });
 
-    items.push({
-      key: "gov_pdf",
-      label: "Gov PDF Pending Approval",
-      children: <GovPDFSection></GovPDFSection>,
-    });
+    // items.push({
+    //   key: "gov_pdf",
+    //   label: "Gov PDF Pending Approval",
+    //   children: <GovPDFSection></GovPDFSection>,
+    // });
   }
 
   return (

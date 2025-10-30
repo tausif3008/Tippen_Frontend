@@ -56,7 +56,7 @@ export const URLS = {
   ALLOCATE_QC_FILES_ADMIN_TO_USER:
     "version_0/document/tippen-qc-assignto-agencyuser-bulk/",
   ALLOCATE_GOVT_QC_FILES_TO_DIST_ADMIN:
-    "version_0/document/govt-qc-assign-districtadmin/",
+    "version_0/document/tippen-gov-qc-assignto-agencyuser-bulk/",
   UPLOAD_QC_FILES_URL: "version_0/document/tippen-qc-upload-bulk/",
   UPLOAD_PDF_FILE_URL: "version_0/document/pdf-upload-bulk/",
   UPLOAD_GOV_QC_FILES_URL: "version_0/document/govt-qc-upload-bulk/",
