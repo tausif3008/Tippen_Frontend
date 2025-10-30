@@ -384,7 +384,7 @@ const QCFileUser = () => {
 
                     let dwgs = file.filter(
                       (element) =>
-                        element.name.split(".")[1].toLowerCase() === "dwg"
+                        element.name.split(".")[1].toLowerCase() === "zip"
                     );
 
                     for (
@@ -393,12 +393,12 @@ const QCFileUser = () => {
                       index++
                     ) {
                       formData.append(
-                        "qc_remark",
+                        "tippen_qc_remarks",
                         remarkObject[selectedRowKeys[index]]
                       );
 
                       formData.append(
-                        "qc_polygon_count",
+                        "polygon_count",
                         polygonCount[selectedRowKeys[index]]
                       );
                     }
@@ -726,7 +726,7 @@ const QCFileUser = () => {
         <Dragger
           {...props}
           fileList={fileList}
-          accept={[".dwg"]}
+          accept={[".zip"]}
           listType="text"
           onChange={uploadingProgress}
           disabled={setedStatus !== "approved"}
@@ -738,7 +738,7 @@ const QCFileUser = () => {
             Click or drag folder to this area to upload
           </p>
           <p className="ant-upload-hint">
-            Support for a single or bulk upload. Only QCs are allowed.
+            Support for a single or bulk upload. Only Zip QCs are allowed.
           </p>
         </Dragger>
 

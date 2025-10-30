@@ -49,15 +49,15 @@ export const URLS = {
   ALLOCATE_TO_AGENCY_SHAPE: "version_0/document/shape-assignto-agency-bulk/",
   GET_QC_DETAILS_URL: "version_0/document/tippen-digitize-document-list/?",
   GET_PDF_PENDING_URL: "version_0/document/qc-document-list/?",
-  GET_GOVT_QC_PENDING_URL: "version_0/document/govt-pending-document-list/?",
+  GET_GOVT_QC_PENDING_URL: "version_0/document/tippen-qc-document-list/?",
   GET_GOVT_PDF_PENDING_URL:
     "version_0/document/govt-pdf-pending-document-list/?",
   ASSIGN_QC_FILES_TO_USER: "version_0/document/tippen-qc-assignto-agency-bulk/",
   ALLOCATE_QC_FILES_ADMIN_TO_USER:
-    "version_0/document/digitize-assignto-agencyuser-bulk/",
+    "version_0/document/tippen-qc-assignto-agencyuser-bulk/",
   ALLOCATE_GOVT_QC_FILES_TO_DIST_ADMIN:
     "version_0/document/govt-qc-assign-districtadmin/",
-  UPLOAD_QC_FILES_URL: "version_0/document/qc-upload-bulk/",
+  UPLOAD_QC_FILES_URL: "version_0/document/tippen-qc-upload-bulk/",
   UPLOAD_PDF_FILE_URL: "version_0/document/pdf-upload-bulk/",
   UPLOAD_GOV_QC_FILES_URL: "version_0/document/govt-qc-upload-bulk/",
   UPLOAD_GOV_PDF_FILE_URL: "version_0/document/govt-pdf-upload-bulk/",
