@@ -59,7 +59,7 @@ export const URLS = {
     "version_0/document/tippen-gov-qc-assignto-agencyuser-bulk/",
   UPLOAD_QC_FILES_URL: "version_0/document/tippen-qc-upload-bulk/",
   UPLOAD_PDF_FILE_URL: "version_0/document/pdf-upload-bulk/",
-  UPLOAD_GOV_QC_FILES_URL: "version_0/document/govt-qc-upload-bulk/",
+  UPLOAD_GOV_QC_FILES_URL: "version_0/document/tippen-gov-qc-upload-bulk/",
   UPLOAD_GOV_PDF_FILE_URL: "version_0/document/govt-pdf-upload-bulk/",
   UPDATE_POLYGON_COUNT_URL: "version_0/document/document-update-remark/",
   ADD_AGENCY_USER_URL: "version_0/authentication/register_agency_user/",

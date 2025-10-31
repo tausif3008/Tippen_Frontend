@@ -598,7 +598,7 @@ const GovQCSection = () => {
           {...props}
           onChange={uploadingProgress}
           fileList={fileList}
-          accept={".dwg"}
+          accept={".zip"}
           listType="text"
           disabled={setedStatus !== "approved" ? true : false}
         >
@@ -609,7 +609,7 @@ const GovQCSection = () => {
             Click or drag folder to this area to upload
           </p>
           <p className="ant-upload-hint">
-            Support for a single or bulk upload. Only PDFs are allowed.
+            Support for a single or bulk upload. Only approved govt QC zip files are allowed.
           </p>
         </Dragger>
         <div
