@@ -182,19 +182,19 @@ const GovQCSection = () => {
     pdfFiles: [],
   });
 
-  function dispatchGovQC(files) {
-    console.log(files, "files");
+  // function dispatchGovQC(files) {
+  //   console.log(files, "files");
 
-    let url = URLS.UPLOAD_GOV_QC_FILES_URL;
+  //   let url = URLS.UPLOAD_GOV_QC_FILES_URL;
 
-    console.log(url, "djfdjfldjlfdlflkj");
-    dispatch(
-      uploadGovQCFilesAction({
-        URL: url,
-        data: { formData: files },
-      })
-    );
-  }
+  //   console.log(url, "djfdjfldjlfdlflkj");
+  //   dispatch(
+  //     uploadGovQCFilesAction({
+  //       URL: url,
+  //       data: { formData: files },
+  //     })
+  //   );
+  // }
 
   const govQCUploadingCompletedSelector = useSelector(
     (state) => state.govQCFileUploadSuccess
@@ -213,16 +213,16 @@ const GovQCSection = () => {
     }
   }, [govQCUploadingCompletedSelector]);
 
-  useEffect(() => {
-    if (pdFiles.pdfFiles.length > 0) {
-      for (const el of pdFiles.pdfFiles) {
-        let formData = new FormData();
-        formData.append("files", el);
-        console.log([...formData], ";formData");
-        dispatchGovQC(formData);
-      }
-    }
-  }, [pdFiles]);
+  // useEffect(() => {
+  //   if (pdFiles.pdfFiles.length > 0) {
+  //     for (const el of pdFiles.pdfFiles) {
+  //       let formData = new FormData();
+  //       formData.append("files", el);
+  //       console.log([...formData], ";formData");
+  //       dispatchGovQC(formData);
+  //     }
+  //   }
+  // }, [pdFiles]);
 
   useEffect(() => {
     if (file && file.length === uploadedFileStatus.totalPDFFiles) {
@@ -237,91 +237,196 @@ const GovQCSection = () => {
     }
   }, [uploadedFileStatus.totalPDFFiles]);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
 
-    if (setedStatus) {
-      if (setedStatus === "approved") {
-        if (file && file.length !== 0) {
-          if (
-            selectedTableRows &&
-            file &&
-            selectedTableRows.length === file.length
-          ) {
-            let canDispatch = true;
-            let selectedFiles = [];
+  //   if (setedStatus) {
+  //     if (setedStatus === "approved") {
+  //       if (file && file.length !== 0) {
+  //         if (
+  //           selectedTableRows &&
+  //           file &&
+  //           selectedTableRows.length * 2 === file.length
+  //         ) {
+  //           let canDispatch = true;
+  //           let selectedFiles = [];
 
-            for (let index = 0; index < selectedTableRows.length; index++) {
-              selectedFiles.push(selectedTableRows[index]["barcode_number"]);
+  //           for (let index = 0; index < selectedTableRows.length; index++) {
+  //             selectedFiles.push(selectedTableRows[index]["barcode_number"]);
+  //           }
+
+  //           for (let index = 0; index < file.length; index++) {
+  //             if (
+  //               !selectedFiles.includes(
+  //                 file[index]["name"].trim().split(".")[0]
+  //               )
+  //             ) {
+  //               canDispatch = false;
+  //               break;
+  //             }
+  //           }
+
+  //           if (canDispatch) {
+  //             let can_proceed = true;
+
+  //             if (can_proceed) {
+  //               setGovQCFiles((s) => {
+  //                 return { pdfFiles: file };
+  //               });
+  //             } else {
+  //               message.info(
+  //                 "Update the number of polygons for the files you've chosen in the table."
+  //               );
+  //             }
+  //           } else {
+  //             message.info(
+  //               "The selected files from the table do not match the uploaded file names!"
+  //             );
+  //           }
+            
+  //         } else {
+  //           message.info(
+  //             "The number of selected files from the table does not align with the count of uploaded files!"
+  //           );
+  //         }
+  //       } else {
+  //         message.info("Please Upload files!");
+  //       }
+  //     } else {
+  //       // if (selectedRowKeys && selectedRowKeys.length !== 0) {
+  //       //   let url = URLS.UPLOAD_GOV_QC_FILES_URL + setedStatus + "/";
+  //       //   let updatedRemarkList = [];
+  //       //   for (let index = 0; index < selectedRowKeys.length; index++) {
+  //       //     updatedRemarkList.push({
+  //       //       id: selectedRowKeys[index],
+  //       //       remarks: remarkObject[selectedRowKeys[index]]
+  //       //         ? remarkObject[selectedRowKeys[index]]
+  //       //         : "",
+  //       //     });
+  //       //   }
+  //       //   dispatch(
+  //       //     uploadDigitizeDocumentsPutActionRejected({
+  //       //       URL: url,
+  //       //       remarksList: updatedRemarkList,
+  //       //     })
+  //       //   );
+  //       //   setSelectedRowKeys([]);
+  //       // } else {
+  //       //   message.info(
+  //       //     "Select a file from the table and decide whether to reject it or place it on hold."
+  //       //   );
+  //       // }
+  //     }
+  //   } else {
+  //     message.info(
+  //       "Please specify whether the selected file should be marked as Approved, Rejected"
+  //     );
+  //   }
+  // };
+
+  // 🔹 Handle submit click
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  if (setedStatus) {
+    if (setedStatus === "approved") {
+      if (file && file.length !== 0) {
+        if (
+          selectedTableRows &&
+          file &&
+          selectedTableRows.length * 2 === file.length
+        ) {
+          let canDispatch = true;
+          let selectedFiles = [];
+
+          for (let index = 0; index < selectedTableRows.length; index++) {
+            selectedFiles.push(selectedTableRows[index]["barcode_number"]);
+          }
+
+          for (let index = 0; index < file.length; index++) {
+            if (
+              !selectedFiles.includes(file[index]["name"].trim().split(".")[0])
+            ) {
+              canDispatch = false;
+              break;
             }
+          }
 
-            for (let index = 0; index < file.length; index++) {
-              if (
-                !selectedFiles.includes(
-                  file[index]["name"].trim().split(".")[0]
-                )
-              ) {
-                canDispatch = false;
-                break;
-              }
-            }
+          if (canDispatch) {
+            let can_proceed = true;
 
-            if (canDispatch) {
-              let can_proceed = true;
+            if (can_proceed) {
+              const zipFiles = file.filter(
+                (f) => f.name.split(".").pop().toLowerCase() === "zip"
+              );
+              const pdfFiles = file.filter(
+                (f) => f.name.split(".").pop().toLowerCase() === "pdf"
+              );
 
-              if (can_proceed) {
-                setGovQCFiles((s) => {
-                  return { pdfFiles: file };
-                });
-              } else {
-                message.info(
-                  "Update the number of polygons for the files you've chosen in the table."
-                );
-              }
+              setGovQCFiles({
+                zipFiles,
+                pdfFiles,
+              });
             } else {
               message.info(
-                "The selected files from the table do not match the uploaded file names!"
+                "Update the number of polygons for the files you've chosen in the table."
               );
             }
           } else {
             message.info(
-              "The number of selected files from the table does not align with the count of uploaded files!"
+              "The selected files from the table do not match the uploaded file names!"
             );
           }
         } else {
-          message.info("Please Upload files!");
+          message.info(
+            "The number of selected files from the table does not align with the count of uploaded files!"
+          );
         }
       } else {
-        // if (selectedRowKeys && selectedRowKeys.length !== 0) {
-        //   let url = URLS.UPLOAD_GOV_QC_FILES_URL + setedStatus + "/";
-        //   let updatedRemarkList = [];
-        //   for (let index = 0; index < selectedRowKeys.length; index++) {
-        //     updatedRemarkList.push({
-        //       id: selectedRowKeys[index],
-        //       remarks: remarkObject[selectedRowKeys[index]]
-        //         ? remarkObject[selectedRowKeys[index]]
-        //         : "",
-        //     });
-        //   }
-        //   dispatch(
-        //     uploadDigitizeDocumentsPutActionRejected({
-        //       URL: url,
-        //       remarksList: updatedRemarkList,
-        //     })
-        //   );
-        //   setSelectedRowKeys([]);
-        // } else {
-        //   message.info(
-        //     "Select a file from the table and decide whether to reject it or place it on hold."
-        //   );
-        // }
+        message.info("Please upload files!");
       }
-    } else {
-      message.info(
-        "Please specify whether the selected file should be marked as Approved, Rejected"
-      );
     }
-  };
+  } else {
+    message.info(
+      "Please specify whether the selected file should be marked as Approved or Rejected"
+    );
+  }
+};
+
+// 🔹 Dispatch upload action
+function dispatchGovQC(formData) {
+  const url = URLS.UPLOAD_GOV_QC_FILES_URL;
+  dispatch(
+    uploadGovQCFilesAction({
+      URL: url,
+      data: { formData },
+    })
+  );
+}
+
+// 🔹 When both pdf and zip files are ready, send them together
+useEffect(() => {
+  if (pdFiles.pdfFiles.length > 0 || pdFiles.zipFiles?.length > 0) {
+    // combine both into a single payload
+    const formData = new FormData();
+
+    pdFiles.pdfFiles.forEach((file) => {
+      formData.append("files", file);
+    });
+
+    pdFiles.zipFiles.forEach((file) => {
+      formData.append("files", file);
+    });
+
+    // append any additional required fields if needed
+    // formData.append("status", setedStatus);
+    // formData.append("user_id", currentUserId);
+
+    console.log([...formData], "Final FormData before dispatch");
+
+    dispatchGovQC(formData);
+  }
+}, [pdFiles]);
 
   function selectedStatus(e) {
     setsetedStatus(e.target.value);
@@ -594,7 +699,7 @@ const GovQCSection = () => {
       </div>
 
       <div className="upload-container">
-        <Dragger
+        {/* <Dragger
           {...props}
           onChange={uploadingProgress}
           fileList={fileList}
@@ -611,7 +716,28 @@ const GovQCSection = () => {
           <p className="ant-upload-hint">
             Support for a single or bulk upload. Only approved govt QC zip files are allowed.
           </p>
-        </Dragger>
+        </Dragger> */}
+
+  <Dragger
+  {...props}
+  onChange={uploadingProgress}
+  fileList={fileList}
+  accept=".zip,.pdf"
+  listType="text"
+  disabled={setedStatus !== "approved"}
+>
+  <p className="ant-upload-drag-icon">
+    <InboxOutlined />
+  </p>
+  <p className="ant-upload-text">
+    Click or drag files to this area to upload
+  </p>
+  <p className="ant-upload-hint">
+    Support for single or bulk upload. Only approved govt QC zip and PDF files are allowed.
+  </p>
+</Dragger>
+
+
         <div
           style={{
             display: "flex",

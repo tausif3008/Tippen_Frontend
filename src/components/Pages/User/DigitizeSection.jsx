@@ -269,12 +269,12 @@ const DigitizeSection = () => {
 
     if (setedStatus) {
       if (setedStatus === "approved") {
-        if (file && file.length === 1) {
+        if (file && file.length === 2) {
           if (file && file.length !== 0) {
             if (
               selectedTableRows &&
               file &&
-              selectedTableRows.length === file.length
+              selectedTableRows.length * 2 === file.length
             ) {
               let canDispatch = true;
               let selectedFiles = [];
@@ -623,11 +623,11 @@ const DigitizeSection = () => {
         </div>
       </div>
       <div className="upload-container">
-        <Dragger
+        {/* <Dragger
           {...props}
           onChange={uploadingProgress}
           fileList={fileList}
-          accept={".zip"}
+          accept={".zip,.pdf"}          
           listType="text"
           disabled={setedStatus !== "approved"}
         >
@@ -641,7 +641,46 @@ const DigitizeSection = () => {
             Support for a single or bulk upload. Only Zip file are
             allowed.
           </p>
-        </Dragger>
+        </Dragger> */}
+
+        <Dragger
+  {...props}
+  onChange={(info) => {
+    const fileList = info.fileList;
+    const validFiles = fileList.filter((file) =>
+      file.name.endsWith(".pdf") || file.name.endsWith(".zip")
+    );
+
+    if (validFiles.length !== fileList.length) {
+      message.error("Only .pdf and .zip files are allowed!");
+    }
+
+    // Ensure both types exist
+    const hasPDF = validFiles.some((file) => file.name.endsWith(".pdf"));
+    const hasZIP = validFiles.some((file) => file.name.endsWith(".zip"));
+
+    if (validFiles.length > 0 && (!hasPDF || !hasZIP)) {
+      message.warning("Please upload both a PDF and a ZIP file.");
+    }
+
+    uploadingProgress({ file: info.file, fileList: validFiles });
+  }}
+  fileList={fileList}
+  accept=".zip,.pdf"
+  listType="text"
+  disabled={setedStatus !== "approved"}
+>
+  <p className="ant-upload-drag-icon">
+    <InboxOutlined />
+  </p>
+  <p className="ant-upload-text">
+    Click or drag files here to upload (must include one .pdf and one .zip)
+  </p>
+  <p className="ant-upload-hint">
+    Supports single or bulk upload. Both PDF and ZIP files are required.
+  </p>
+</Dragger>
+
         <div
           style={{
             display: "flex",

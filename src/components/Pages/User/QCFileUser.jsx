@@ -338,32 +338,51 @@ const QCFileUser = () => {
     if (selectedRowKeys.length !== 0) {
       if (setedStatus) {
         if (setedStatus === "approved") {
+          // alert(selectedRowKeys.length)
           if (selectedRowKeys && selectedRowKeys.length === 1) {
             if (file && file.length !== 0) {
               if (
                 selectedTableRows &&
                 file &&
-                selectedTableRows.length === file.length
+                selectedTableRows.length * 2 === file.length
               ) {
                 let canDispatch = true;
                 let selectedfilesDwg = [];
 
-                for (let index = 0; index < file.length; index++) {
-                  selectedfilesDwg.push(
-                    file[index]["name"].trim().split(".")[0]
-                  );
-                }
 
-                for (let index = 0; index < selectedfilesDwg.length; index++) {
-                  if (
-                    !selectedfilesDwg.includes(
-                      selectedTableRows[index]["file_name"].trim().split(".")[0]
-                    )
-                  ) {
-                    canDispatch = false;
-                    break;
-                  }
+
+                for (let index = 0; index < selectedTableRows.length; index++) {
+                selectedfilesDwg.push(selectedTableRows[index]["barcode_number"]);
+              }
+
+              for (let index = 0; index < file.length; index++) {
+                if (
+                  !selectedfilesDwg.includes(
+                    file[index]["name"].trim().split(".")[0]
+                  )
+                ) {
+                  canDispatch = false;
+                  break;
                 }
+              }
+
+                // for (let index = 0; index < file.length; index++) {
+                //   selectedfilesDwg.push(
+                //     file[index]["name"].trim().split(".")[0]
+                //   );
+                // }
+
+                // for (let index = 0; index < selectedfilesDwg.length; index++) {
+                //   if (
+                //     !selectedfilesDwg.includes(
+                //       selectedTableRows[index]["file_name"].trim().split(".")[0]
+
+                //     )
+                //   ) {
+                //     canDispatch = false;
+                //     break;
+                //   }
+                // }
 
                 if (canDispatch) {
                   let can_proceed = true;
@@ -382,10 +401,15 @@ const QCFileUser = () => {
                   if (can_proceed) {
                     let formData = new FormData();
 
-                    let dwgs = file.filter(
-                      (element) =>
-                        element.name.split(".")[1].toLowerCase() === "zip"
-                    );
+                    // let dwgs = file.filter(
+                    //   (element) =>
+                    //     element.name.split(".")[1].toLowerCase() === "zip"
+                    // );
+
+                    let dwgs = file.filter((element) => {
+                      const ext = element.name.split(".").pop().toLowerCase();
+                      return ext === "zip" || ext === "pdf";
+                    });
 
                     for (
                       let index = 0;
@@ -723,10 +747,10 @@ const QCFileUser = () => {
       </div>
 
       <div className="upload-container">
-        <Dragger
+        {/* <Dragger
           {...props}
           fileList={fileList}
-          accept={[".zip"]}
+          accept={[".zip,.pdf"]}
           listType="text"
           onChange={uploadingProgress}
           disabled={setedStatus !== "approved"}
@@ -740,7 +764,49 @@ const QCFileUser = () => {
           <p className="ant-upload-hint">
             Support for a single or bulk upload. Only Zip QCs are allowed.
           </p>
-        </Dragger>
+        </Dragger> */}
+
+  <Dragger
+  {...props}
+  fileList={fileList}
+  accept=".zip,.pdf"
+  listType="text"
+  onChange={(info) => {
+    const fileList = info.fileList;
+
+    // Allow only .pdf and .zip files
+    const validFiles = fileList.filter((file) =>
+      file.name.endsWith(".pdf") || file.name.endsWith(".zip")
+    );
+
+    if (validFiles.length !== fileList.length) {
+      message.error("Only .pdf and .zip files are allowed!");
+    }
+
+    // Validation to check if both types exist
+    const hasPDF = validFiles.some((file) => file.name.endsWith(".pdf"));
+    const hasZIP = validFiles.some((file) => file.name.endsWith(".zip"));
+
+    if (validFiles.length > 0 && (!hasPDF || !hasZIP)) {
+      message.warning("Please upload both a PDF and a ZIP file.");
+    }
+
+    uploadingProgress({ file: info.file, fileList: validFiles });
+  }}
+  disabled={setedStatus !== "approved"}
+>
+
+  <p className="ant-upload-drag-icon">
+    <InboxOutlined />
+  </p>
+  <p className="ant-upload-text">
+    Click or drag files to this area to upload
+  </p>
+  <p className="ant-upload-hint">
+    Supports single or bulk upload. Both PDF and ZIP files are required.
+  </p>
+</Dragger>
+
 
         <div
           style={{
